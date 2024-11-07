@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Subtitles Extractor",
+  "version": "1.0",
+  "description": "Displays YouTube subtitles in a separate window",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
